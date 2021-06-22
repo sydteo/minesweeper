@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <title>MineSweeper</title>
 
-    <h1 class = "page">Welcome to the Game</h1>
+    
     <script src="app.js" charset="utf-8"></script>
     <link rel="stylesheet" href="style.css"></link>
    
 </head>
 <body>
-    <div class="grid"></div>
+    <div class="container">
+        <h1 class = "title">Welcome to the Game</h1>
+        <button id="easy" onclick="setLevel()">Easy</button>
+        <button id="medium" onclick="setLevel()">Medium</button>
+        <button id="hard" onclick="setLevel()">Hard</button>
+        <div class="grid"></div>
+        <button id="reset">Reset Game</button>
+        
+    </div>
 </body>
 </html>

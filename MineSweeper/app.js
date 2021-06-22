@@ -8,10 +8,44 @@ document.addEventListener('DOMContentLoaded', () => {
     let squares = []
     //set the number of bombs 
     let bombAmount = 20
-
     let isGameOver = false 
-
     let flags = 0
+
+    // setLevel()
+
+    // function setLevel() {
+    //     level = document.getElementById('level').value
+    //     switch(level) {
+    //         case "easy": 
+    //             level = {
+    //                 width = 10
+    //                 bombAmount = 20
+    //             }
+    //             createBoard()
+    //             break;
+    
+    //         case "medium":
+    //             level = {
+    //                 width = 15
+    //                 bombAmount = 70
+    //             }
+    //             createBoard()
+    //             break;
+            
+    //             case "medium":
+    //                 level = {
+    //                     width = 20
+    //                     bombAmount = 160
+    //                 }
+    //                 createBoard()
+    //                 break;
+                    
+    //             default:
+    //                 createBoard()
+    //                 break;
+    //     }
+    // }
+    
     //create Board
     function createBoard() {
         //get shuffled game array with random bombs
@@ -23,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const gameArray = emptyArray.concat(bombsArray)
         //shuffle the array for each round of the game
         const shuffledArray = gameArray.sort(() => Math.random() - 0.5)
-        
 
 
         for (let i = 0; i < width * width; i++) {
@@ -78,8 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+    
     createBoard()
-
+    
     //add Flag with right click
     function addFlag(square) {
         if (isGameOver) return

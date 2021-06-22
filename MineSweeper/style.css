@@ -1,26 +1,46 @@
+.container {
+  width: 500px;
+}
+
 .grid {
-  width: 800px;
-  margin: 0 auto;
   height: 400px;
   width: 400px;
   display: flex;
   flex-wrap: wrap;
-  background-color: grey;
+  background-color: pink;
+  margin-left: 50px;
+  margin-top: 20px;
+  border: 10px solid #dcd6bc;
+  margin-bottom: 10px;
 }
 
 .grid div {
   height: 40px;
   width: 40px;
+  border: 5px solid;
+  border-color: #e6fff7 #fcdcfa #ffffff #fff9db;
+  box-sizing: border-box;
 }
 
 .checked {
-  background-color: red;
-}
-.bomb {
-  background-color: orange;
+  background-color: #eb4966;
 }
 
-.page {
-  padding: 30px;
+.bomb {
+  height: 40px;
+  width: 40px;
+  padding-top: 4px;
+  padding-left: 4px;
+}
+
+.flag {
+  height: 40px;
+  width: 40px;
+  padding-top: 4px;
+  padding-left: 4px;
+}
+
+.title {
   font-family: sans-serif;
+  color: #7f96e3;
 }
