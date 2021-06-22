@@ -42,6 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
             square.addEventListener('click', function(e) {
                 click(square)
             })
+
+            //cntrl and left click
+            square.oncontextmenu = function(e) {
+                e.preventDefault()
+                addFlag(square)
+            }
         }
 
         for(let i = 0; i < squares.length; i++) {
@@ -80,10 +86,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!square.classList.contains('checked') && (flags < bombAmount)) {
             if (!square.classList.contains('flag')) {
                 square.classList.add('flag')
-                square.innerHTML = ''
+                square.innerHTML = '🚩'
                 flags++
+                checkForWin()
             } else {
-                
+                square.classList.remove('flag')
+                square.innerHTML = ''
+                flags -- 
             }
         }
     }
@@ -169,5 +178,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 square.innerHTML = '💣'
             }
         })
+    }
+
+    //check for win
+    function checkForWin() {
+        let matches = 0
+        for (let i = 0; i < squares.length; i++) {
+            if (squares[i].classList.contains('flag') && squares[i].classList.contains('bomb')) {
+                matches++
+            }
+            if (matches === bombAmount) {
+                console.log('You Win!')
+                isGameOver = true
+            }
+        }
     }
 })
