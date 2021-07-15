@@ -1,3 +1,10 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e6fff7;
+}
 .container {
   width: 500px;
 }
@@ -41,6 +48,19 @@
 }
 
 .title {
+  margin-top: 70px;
   font-family: sans-serif;
   color: #7f96e3;
+}
+
+.button {
+  display: flex;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.restart:hover {
+  cursor: pointer;
 }
