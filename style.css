@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e6fff7;
+}
+.container {
+  width: 500px;
+}
+
+.grid {
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: pink;
+  margin-left: 50px;
+  margin-top: 20px;
+  border: 10px solid #dcd6bc;
+  margin-bottom: 10px;
+}
+
+.grid div {
+  height: 40px;
+  width: 40px;
+  border: 5px solid;
+  border-color: #e6fff7 #fcdcfa #ffffff #fff9db;
+  box-sizing: border-box;
+}
+
+.checked {
+  background-color: #eb4966;
+}
+
+.bomb {
+  height: 40px;
+  width: 40px;
+  padding-top: 4px;
+  padding-left: 4px;
+}
+
+.flag {
+  height: 40px;
+  width: 40px;
+  padding-top: 4px;
+  padding-left: 4px;
+}
+
+.title {
+  margin-top: 70px;
+  font-family: sans-serif;
+  color: #7f96e3;
+}
+
+.button {
+  display: flex;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.restart:hover {
+  cursor: pointer;
+}
